@@ -36,11 +36,17 @@ class LearningAgent(Agent):
         ########### 
         ## TO DO ##
         ###########
-        self.epsilon = self.epsilon - 0.05
-        
         # Update epsilon using a decay function of your choice
+        if testing==True:
+            self.epslion=0
+            self.alpha=0
         # Update additional class parameters as needed
         # If 'testing' is True, set epsilon and alpha to 0
+        else:
+            self.epsilon = self.epsilon - 0.05
+        
+        
+
 
         return None
 
@@ -206,4 +212,10 @@ def run():
 
 
 if __name__ == '__main__':
+#    import sys
+#   import pygame
+#    for evt in pygame.event.get():
+#        if evt.type == pygame.QUIT:
+#            pygame.quit()
+#            sys.exit()
     run()
