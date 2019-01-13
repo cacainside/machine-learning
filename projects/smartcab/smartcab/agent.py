@@ -24,6 +24,7 @@ class LearningAgent(Agent):
         ###########
         # Set any additional class parameters as needed
         self.t = 0
+        self.acons = 0.999
 
 
     def reset(self, destination=None, testing=False):
@@ -48,9 +49,9 @@ class LearningAgent(Agent):
             
             self.t = self.t + 1
             #self.epsilon = 1/ ( self.t* self.t )
-            #self.epsilon = self.alpha ** self.t
-            self.epsilon = math.fabs(math.cos(self.alpha*self.t))
-        
+            # self.epsilon = self.alpha ** self.t
+            #self.epsilon = math.fabs(math.cos(self.alpha*self.t))
+            self.epsilon = math.pow(self.acons, self.t)
         
 
 
@@ -129,7 +130,9 @@ class LearningAgent(Agent):
             
         else:
             # When learning, choose a random action with 'epsilon' probability
-            if self.epsilon > 0.02 and self.epsilon > random.random():
+  
+            # if self.epsilon > 0.02 and self.epsilon > random.random():
+            if random.random() < self.epsilon:
                 action = random.choice(self.valid_actions)
             else:
                 valid_actions = []
@@ -192,8 +195,8 @@ def run():
     #   learning   - set to True to force the driving agent to use Q-learning
     #    * epsilon - continuous value for the exploration factor, default is 1
     #    * alpha   - continuous value for the learning rate, default is 0.5
-    agent = env.create_agent(LearningAgent, learning=True, alpha=(math.pi/20), epsilon=1)
-    
+    #agent = env.create_agent(LearningAgent, learning=True, alpha=(math.pi/20), epsilon=1)
+    agent = env.create_agent(LearningAgent, learning=True, alpha=0.01, epsilon=1)
     ##############
     # Follow the driving agent
     # Flags:
@@ -214,7 +217,7 @@ def run():
     # Flags:
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
-    sim.run(n_test=10, tolerance=0.05)
+    sim.run(n_test=50, tolerance=0.05)
 
 
 if __name__ == '__main__':
