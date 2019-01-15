@@ -1,0 +1,580 @@
+/-----------------------------------------
+| State-action rewards from Q-Learning
+\-----------------------------------------
+
+forward_green_None_None
+ -- None : -5.39
+ -- forward : 1.91
+ -- right : 0.65
+ -- left : 0.56
+
+left_green_None_right
+ -- None : -5.54
+ -- forward : 1.18
+ -- right : -0.08
+ -- left : -19.92
+
+left_green_right_left
+ -- None : -4.83
+ -- forward : 0.76
+ -- right : 0.19
+ -- left : 1.07
+
+forward_green_None_left
+ -- None : -5.00
+ -- forward : 1.59
+ -- right : 0.51
+ -- left : 0.76
+
+left_green_right_None
+ -- None : -4.91
+ -- forward : 0.55
+ -- right : 0.24
+ -- left : 1.37
+
+forward_green_None_right
+ -- None : -4.97
+ -- forward : 1.35
+ -- right : 0.57
+ -- left : -19.87
+
+forward_red_forward_right
+ -- None : 1.60
+ -- forward : -40.26
+ -- right : -20.06
+ -- left : -40.06
+
+left_green_left_None
+ -- None : -5.50
+ -- forward : 0.25
+ -- right : 0.74
+ -- left : 2.23
+
+forward_green_right_left
+ -- None : -5.48
+ -- forward : 1.61
+ -- right : 1.23
+ -- left : 0.96
+
+left_red_right_left
+ -- None : 2.52
+ -- forward : -12.14
+ -- right : 0.72
+ -- left : -9.98
+
+forward_red_right_right
+ -- None : 1.83
+ -- forward : -10.52
+ -- right : 0.79
+ -- left : -36.77
+
+right_green_right_forward
+ -- None : -4.11
+ -- forward : 1.06
+ -- right : 2.06
+ -- left : -19.63
+
+right_red_forward_right
+ -- None : 1.22
+ -- forward : -40.06
+ -- right : -20.28
+ -- left : -40.13
+
+right_green_forward_None
+ -- None : -5.70
+ -- forward : 0.38
+ -- right : 1.50
+ -- left : 0.96
+
+left_red_None_left
+ -- None : 2.26
+ -- forward : -10.64
+ -- right : 0.85
+ -- left : -9.35
+
+forward_red_right_None
+ -- None : 1.74
+ -- forward : -10.48
+ -- right : 0.35
+ -- left : -10.35
+
+right_green_left_forward
+ -- None : -5.32
+ -- forward : 0.65
+ -- right : 2.25
+ -- left : -19.79
+
+forward_red_forward_None
+ -- None : 1.85
+ -- forward : -40.47
+ -- right : -20.00
+ -- left : -40.25
+
+left_red_left_None
+ -- None : 0.90
+ -- forward : -9.59
+ -- right : 0.70
+ -- left : -12.15
+
+right_green_None_None
+ -- None : -5.27
+ -- forward : 0.38
+ -- right : 1.70
+ -- left : 0.57
+
+forward_red_left_forward
+ -- None : 1.71
+ -- forward : -10.51
+ -- right : 0.63
+ -- left : -9.82
+
+forward_green_forward_right
+ -- None : -4.75
+ -- forward : 2.56
+ -- right : 0.60
+ -- left : -19.82
+
+left_red_left_left
+ -- None : 1.97
+ -- forward : -11.94
+ -- right : 1.03
+ -- left : -10.23
+
+left_red_forward_forward
+ -- None : 2.11
+ -- forward : -39.40
+ -- right : -19.71
+ -- left : -39.82
+
+right_red_None_left
+ -- None : 0.79
+ -- forward : -9.43
+ -- right : 1.81
+ -- left : -9.81
+
+left_red_forward_right
+ -- None : 2.17
+ -- forward : -39.84
+ -- right : -19.97
+ -- left : -39.68
+
+right_red_right_forward
+ -- None : 0.68
+ -- forward : -37.61
+ -- right : 1.83
+ -- left : -15.56
+
+left_green_left_left
+ -- None : -4.51
+ -- forward : 1.23
+ -- right : 0.29
+ -- left : 1.73
+
+left_green_None_left
+ -- None : -5.11
+ -- forward : 1.06
+ -- right : 0.46
+ -- left : 2.32
+
+left_red_None_None
+ -- None : 2.30
+ -- forward : -12.41
+ -- right : 0.22
+ -- left : -10.45
+
+right_green_left_None
+ -- None : -4.39
+ -- forward : 0.34
+ -- right : 2.65
+ -- left : 0.28
+
+left_red_right_forward
+ -- None : 2.24
+ -- forward : -30.47
+ -- right : 0.68
+ -- left : -15.76
+
+right_green_left_left
+ -- None : -4.84
+ -- forward : 0.15
+ -- right : 2.08
+ -- left : 0.40
+
+forward_red_None_right
+ -- None : 2.05
+ -- forward : -9.43
+ -- right : -0.29
+ -- left : -39.59
+
+left_red_None_right
+ -- None : 1.89
+ -- forward : -10.55
+ -- right : 0.08
+ -- left : -40.48
+
+right_green_forward_forward
+ -- None : -5.49
+ -- forward : 0.89
+ -- right : 1.35
+ -- left : -19.73
+
+right_red_right_right
+ -- None : 0.06
+ -- forward : -30.79
+ -- right : 1.68
+ -- left : 0.00
+
+right_green_right_left
+ -- None : -4.96
+ -- forward : 0.74
+ -- right : 2.57
+ -- left : 0.99
+
+forward_red_forward_left
+ -- None : 1.55
+ -- forward : -40.65
+ -- right : -19.95
+ -- left : -40.09
+
+right_green_None_right
+ -- None : -5.16
+ -- forward : 0.45
+ -- right : 2.31
+ -- left : -19.97
+
+left_red_right_right
+ -- None : 1.80
+ -- forward : -9.97
+ -- right : 0.29
+ -- left : -39.21
+
+forward_red_None_None
+ -- None : 1.42
+ -- forward : -9.70
+ -- right : 1.01
+ -- left : -11.18
+
+forward_red_left_left
+ -- None : 1.36
+ -- forward : -31.32
+ -- right : 0.42
+ -- left : -10.07
+
+forward_green_forward_None
+ -- None : -4.46
+ -- forward : 2.47
+ -- right : 0.08
+ -- left : 1.04
+
+forward_red_left_right
+ -- None : 2.44
+ -- forward : -15.68
+ -- right : 0.53
+ -- left : -40.15
+
+forward_green_left_right
+ -- None : -5.02
+ -- forward : 1.94
+ -- right : 0.53
+ -- left : -20.25
+
+right_green_forward_left
+ -- None : -4.43
+ -- forward : 0.38
+ -- right : 2.32
+ -- left : 1.32
+
+forward_green_None_forward
+ -- None : -4.89
+ -- forward : 1.42
+ -- right : 0.36
+ -- left : -20.23
+
+right_red_None_None
+ -- None : 0.90
+ -- forward : -10.00
+ -- right : 1.56
+ -- left : -10.69
+
+forward_green_right_None
+ -- None : -4.90
+ -- forward : 1.31
+ -- right : 0.74
+ -- left : 0.31
+
+right_red_left_forward
+ -- None : 0.49
+ -- forward : -12.32
+ -- right : 1.62
+ -- left : -12.00
+
+left_red_left_right
+ -- None : 2.18
+ -- forward : -10.80
+ -- right : 0.54
+ -- left : -39.71
+
+right_green_None_forward
+ -- None : -5.35
+ -- forward : 0.70
+ -- right : 2.18
+ -- left : -20.73
+
+forward_green_forward_forward
+ -- None : -5.09
+ -- forward : 2.31
+ -- right : 0.74
+ -- left : -20.30
+
+left_green_left_right
+ -- None : -5.37
+ -- forward : 0.21
+ -- right : 0.27
+ -- left : -20.31
+
+left_red_forward_None
+ -- None : 2.40
+ -- forward : -39.54
+ -- right : -20.46
+ -- left : -39.67
+
+left_green_None_forward
+ -- None : -4.91
+ -- forward : 0.86
+ -- right : -0.19
+ -- left : -20.53
+
+forward_green_forward_left
+ -- None : -5.54
+ -- forward : 2.25
+ -- right : 1.34
+ -- left : 0.05
+
+forward_green_right_right
+ -- None : -4.11
+ -- forward : 1.47
+ -- right : 0.51
+ -- left : -19.03
+
+left_green_forward_None
+ -- None : -5.08
+ -- forward : 0.72
+ -- right : 0.63
+ -- left : 1.85
+
+right_green_left_right
+ -- None : -5.64
+ -- forward : 1.28
+ -- right : 2.39
+ -- left : -19.33
+
+forward_green_left_left
+ -- None : -4.98
+ -- forward : 1.79
+ -- right : 0.26
+ -- left : 0.90
+
+right_green_right_None
+ -- None : -5.16
+ -- forward : 0.39
+ -- right : 1.89
+ -- left : 1.56
+
+left_green_forward_right
+ -- None : -4.63
+ -- forward : 0.25
+ -- right : 0.38
+ -- left : -19.72
+
+forward_red_left_None
+ -- None : 1.90
+ -- forward : -11.80
+ -- right : 0.75
+ -- left : -39.04
+
+right_red_None_right
+ -- None : 0.70
+ -- forward : -10.39
+ -- right : 2.09
+ -- left : -39.43
+
+right_red_right_None
+ -- None : 0.99
+ -- forward : -10.22
+ -- right : 2.17
+ -- left : -11.66
+
+left_green_right_right
+ -- None : -4.66
+ -- forward : 1.02
+ -- right : 0.06
+ -- left : -19.57
+
+left_red_forward_left
+ -- None : 1.87
+ -- forward : -39.79
+ -- right : -19.47
+ -- left : -40.10
+
+left_green_forward_left
+ -- None : -5.10
+ -- forward : 1.23
+ -- right : 1.00
+ -- left : 2.04
+
+left_green_None_None
+ -- None : -5.79
+ -- forward : 1.03
+ -- right : 1.10
+ -- left : 1.58
+
+left_green_left_forward
+ -- None : -5.65
+ -- forward : 0.79
+ -- right : -0.08
+ -- left : -20.00
+
+right_red_right_left
+ -- None : 0.24
+ -- forward : -31.58
+ -- right : 1.19
+ -- left : -9.67
+
+forward_red_right_left
+ -- None : 1.48
+ -- forward : -9.55
+ -- right : 0.88
+ -- left : -30.55
+
+forward_red_right_forward
+ -- None : 2.36
+ -- forward : -9.84
+ -- right : 1.15
+ -- left : -10.88
+
+right_green_forward_right
+ -- None : -4.62
+ -- forward : 0.57
+ -- right : 2.46
+ -- left : -20.66
+
+right_red_forward_None
+ -- None : 0.97
+ -- forward : -40.86
+ -- right : -20.17
+ -- left : -40.01
+
+forward_green_right_forward
+ -- None : -5.01
+ -- forward : 2.57
+ -- right : 0.45
+ -- left : -20.55
+
+right_green_right_right
+ -- None : -4.71
+ -- forward : -0.59
+ -- right : 2.15
+ -- left : -17.60
+
+right_red_left_None
+ -- None : 0.75
+ -- forward : -9.87
+ -- right : 2.26
+ -- left : -15.65
+
+left_green_right_forward
+ -- None : -5.36
+ -- forward : 1.53
+ -- right : 0.23
+ -- left : -20.12
+
+right_red_forward_forward
+ -- None : 0.91
+ -- forward : -40.15
+ -- right : -19.78
+ -- left : -40.32
+
+forward_red_None_left
+ -- None : 2.21
+ -- forward : -9.59
+ -- right : 1.12
+ -- left : -16.46
+
+left_red_left_forward
+ -- None : 1.78
+ -- forward : -31.41
+ -- right : 0.95
+ -- left : -9.84
+
+right_red_left_right
+ -- None : 1.03
+ -- forward : -15.82
+ -- right : 2.15
+ -- left : -39.39
+
+forward_green_left_forward
+ -- None : -4.35
+ -- forward : 1.18
+ -- right : -0.01
+ -- left : -19.34
+
+forward_red_forward_forward
+ -- None : 2.25
+ -- forward : -39.36
+ -- right : -20.13
+ -- left : -40.04
+
+right_red_None_forward
+ -- None : 0.86
+ -- forward : -9.94
+ -- right : 1.45
+ -- left : -10.28
+
+forward_green_left_None
+ -- None : -5.40
+ -- forward : 1.49
+ -- right : 0.40
+ -- left : 0.48
+
+forward_red_None_forward
+ -- None : 1.79
+ -- forward : -10.13
+ -- right : 1.47
+ -- left : -38.80
+
+right_red_left_left
+ -- None : 0.57
+ -- forward : -9.18
+ -- right : 1.61
+ -- left : -10.48
+
+right_red_forward_left
+ -- None : 1.36
+ -- forward : -40.07
+ -- right : -20.24
+ -- left : -40.50
+
+left_green_forward_forward
+ -- None : -4.54
+ -- forward : 0.12
+ -- right : 0.71
+ -- left : -20.12
+
+left_red_right_None
+ -- None : 2.49
+ -- forward : -10.10
+ -- right : 0.84
+ -- left : -9.60
+
+right_green_None_left
+ -- None : -4.97
+ -- forward : 0.98
+ -- right : 1.47
+ -- left : 0.82
+
+left_red_None_forward
+ -- None : 1.50
+ -- forward : -9.63
+ -- right : 0.47
+ -- left : -10.51
+
