@@ -12121,7 +12121,7 @@ Standard deviation of prices: $165171.13154429474
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:Yes, Model has a coefficient of determination, R^2, of 0.923, which means that 92.3% of the variance in Y is predicatable from X.</strong></p>
+<p><strong>Answer:Model has a coefficient of determination, R^2, of 0.923, which means that 92.3% of the variance in Y is predicatable from X. The regression model accounts for the 92.3% of the variance. </strong></p>
 
 </div>
 </div>
@@ -12196,7 +12196,7 @@ Standard deviation of prices: $165171.13154429474
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: You can not use same data to train and test. To split some testing data assure us to have real data to test after training. </strong></p>
+<p><strong>Answer: You can not use same data to train and test. To split some testing data assure us to have real data to test after training. Suppose we use all of the data to training, the result might be overfitting or underfitting. We can tell underfitting by low score, but when our model is overfitting, we have high score. Without test data, we are unable to figure out overfitting case. While we use all data to train, we can not improve our model from test result. </strong></p>
 
 </div>
 </div>
@@ -12276,7 +12276,11 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: The max depth for the model in upper left graph is 1. At the begining training score is high, and the testing score is low, and the more training/tesing points are added, the score are converging to 0.4. It means underfitting, because it oversimplifers the training data. On the other hand, the figure with max depth=10 meansoverfitting, because the training score is always high, but the testing score trend to be unchanged. In my opinion, I would choose max_depth=3. Before 350 traning points, the more training/tesing points are added, the score are converging to 0.8, and after 350 training points, the testing score decreases. Having enough training points is more important than having more training points, because after a certain amount of the training points, the score converging to particular scores. </strong></p>
+<p><strong>Answer: 
+The max depth for the model in upper left graph is 1. At the begining training score is high, and the testing score is low, and the more training/tesing points are added, the score are converging to 0.4. It means underfitting, because it oversimplifers the training data. Even if adding more training points, the score converge to low score. 
+On the other hand, the figure with max depth=10 means overfitting, because the training score is always high, but the testing score trend to be unchanged. There is large gap between training score and testing score.
+In figure max_depth=3 and figure max_depth=6, both training score are high, and as more training points increase, testing scores increase. And both testing and training score converge. In my opinion, I would choose max_depth=3, with smaller gap between  testing and training score, which converge to similar value 0.8. 
+Having enough training points is more important than having more training points, because after a certain amount of the training points, the score converging to particular scores. </strong></p>
 
 </div>
 </div>
@@ -12343,7 +12347,8 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: When the model is trained by maximum depth of 1, the model suffers from high bias, it can be explained by the low score of both training and validation score. When the model is trained by maximum depth of 10, the model suffers from high variance. It is showned in the graph that the difference between the training score and the validation score is huge. </strong></p>
+<p><strong>Answer: When the model is trained by maximum depth of 1, the model suffers from high bias, it can be explained by the low score of both training and validation score. Even adding more data, it turns out converging to low score.
+When the model is trained by maximum depth of 10, the model suffers from high variance. It is showned in the graph that training score is high, however, difference between the training score and the validation score is huge. </strong></p>
 
 </div>
 </div>
@@ -12397,7 +12402,7 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: Grid search technique is a method to decide which combination of parameters is neccessary for the model. And grid search technique would calcuate each result, and choose the best one. It can be applied to optimized a learning algorithm by using all of the combination of parameter to find out the optimal combination. </strong></p>
+<p><strong>Answer: Grid search technique is a method to decide which combination of parameters is neccessary for the model. And grid search technique would calcuate each result, and choose the best one. From example, in SVM model, we have gamma and C parameter, in grid search the input would be gamma (0.1, 1, 10) and C (0.1, 1, 10). And the output would be the best result of gamma and C, e.g. (gamma= 0.1, C =10) the computing effort would be the input number of gamma cross input number of C. In my example would be 3 cross 3=9. It can be applied to optimized a learning algorithm by using all of the combination of parameter to find out the optimal combination. </strong></p>
 
 </div>
 </div>
@@ -12422,7 +12427,7 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: The k-fold cross validation training technique is used to split data into k parts, and k-1 part would be training data, and 1 would be testing data, and the model would be trained k times and test k times. Grid search would be helpful to select best parameter. </strong></p>
+<p><strong>Answer: The k-fold cross validation training technique is used to split data into k parts, and k-1 part would be training data, and 1 would be validation data, and the model would be trained k times and validate k times. Grid search would be helpful to select best parameter, for example, the max depth in decision tree, or gamma and kernel in SVM. </strong></p>
 
 </div>
 </div>
@@ -12675,7 +12680,10 @@ Predicted selling price for Client 3&#39;s home: $925,225.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: I would recommend Client 1 sell 412,300.00 ,Client 2 sell 233,768.18 and Client 3 sell 925,225.00. I think the price is reasonable because client 3 (with higher predicted selling price) has the biggest house, relatively better public school neighborhood with the lowest poverty level. However client 2 (with lower predicted selling price) has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.</strong></p>
+<p>**Answer: I would recommend Client 1 sell 412,300.00 ,Client 2 sell 233,768.18 and Client 3 sell 925,225.00. 
+I think the price is reasonable because client 3 (with higher predicted selling price) has the biggest house, relatively better public school neighborhood with the lowest poverty level. 
+However client 2 (with lower predicted selling price) has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools. 
+The prediction of Client 1, Client 2 and Client 3 is between the minimum price 105,000.00 and the maximum price 1,024,800.00. So I think the result is reasonable.</p>
 
 </div>
 </div>
@@ -12755,7 +12763,7 @@ Range in prices: $69,044.61
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: The data collected in 1987 would not be relevant because thiere is inflation. I think it can still add same feaures such as the establishing year of the building, etc. The model is robust enough to make consistent predictions. The data collected in urban city would not be applicable in rural city. It is not quite fair to judge the price of an individual home based on the characteristics of the entire neighborhood.</strong></p>
+<p><strong>Answer: The data collected in 1987 would not be relevant because there is inflation. I think it can still add same feaures such as the establishing year of the building, etc. The model is robust enough to make consistent predictions. The data collected in urban city would not be applicable in rural city. It is not quite fair to judge the price of an individual home based on the characteristics of the entire neighborhood. But I still think constructed model should use in real world setting, it won't be 100% correct, but we still can use it for reference.</strong></p>
 
 </div>
 </div>
