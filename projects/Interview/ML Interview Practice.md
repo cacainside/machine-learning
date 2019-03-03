@@ -21,9 +21,21 @@ Assuming you have a stream of these tweets coming in, describe the process of co
 * How to present the results: We can present the result by showing the summarize words of each group, the word shows bigger while there's larger appearance in the group. 
 
 3. In a classification setting, given a dataset of labeled examples and a machine learning model you're trying to fit, describe a strategy to detect and prevent overfitting. 
+* How to detect overfitting: Use cross validation technique to evaluate the result.
+* How to prevent overfitting: Use more trainining data and choose a less powerful model.
 
 
 4. Your team is designing the next generation user experience for your flagship 3D modeling tool. Specifically, you have been tasked with implementing a smart context menu that learns from a modeler’s usage of menu options and shows the ones that would be most beneficial. E.g. I often use Edit > Surface > Smooth Surface, and wish I could just right click and there would be a Smooth Surface option just like Cut, Copy and Paste. Note that not all commands make sense in all contexts, for instance I need to have a surface selected to smooth it. How would you go about designing a learning system/agent to enable this behavior?
+*  I would first collect all the behavior from user start to click menu options to the user finally click their command. And I would train several models, depends on the total amount of user's command, each command would have one model.
+
 5. Give an example of a situation where regularization is necessary for learning a good model. How about one where regularization doesn't make sense?
+* Regulation is necessary for SVM.
+* Regultation is not nessary for decision tree.
+
 6. Your neighborhood grocery store would like to give targeted coupons to its customers, ones that are likely to be useful to them. Given that you can access the purchase history of each customer and catalog of store items, how would you design a system that suggests which coupons they should be given? Can you measure how well the system is performing?
+* System design: I would analyze each customer's purchase history and predict what's their next purchases.
+* Measure the system: I would measure the system by the percentage of using coupons and delivered coupons. 
+
 7. If you were hired for your machine learning position starting today, how do you see your role evolving over the next year? What are your long-term career goals, and how does this position help you achieve them?
+* I wish my role can be a senior machine learning enigineer next year, who can have perspective for different kind of machine learning problem.
+* My career goal is to become a data scenitist, which have knowledge of machine learning technique, and have insight of domain knowledge.
